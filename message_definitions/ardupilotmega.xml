@@ -1085,7 +1085,7 @@
     <message id="152" name="MEMINFO">
       <description>State of APM memory.</description>
       <field type="uint16_t" name="brkval">Heap top.</field>
-      <field type="uint16_t" name="freemem" units="bytes">Free memory.</field>
+      <field type="uint16_t" name="freemem" units="bytes">Free memory.</field>temperature
       <extensions/>
       <field type="uint32_t" name="freemem32" units="bytes">Free memory (32 bit).</field>
     </message>
@@ -1521,6 +1521,13 @@
       <description>RPM sensor output.</description>
       <field type="float" name="rpm1">RPM Sensor1.</field>
       <field type="float" name="rpm2">RPM Sensor2.</field>
+    </message>
+    <message id="229" name="AERODELFT_SENSOR_TEMP">
+      <description>Values obtained from reading a i2c based thermocouple amplifier</description>
+      <field type="uint64_t" name="timestamp_sample">Sample time stamp</field>
+      <field type="uint64_t" name="timestamp">Timestamp</field>
+      <field type="uint32_t" name="device_id">Device Id</field>
+      <field type="float" name="temperature" units="C">Temperature</field>
     </message>
     <!-- ardupilot specific mavlink2 messages starting at 11000-->
     <message id="11000" name="DEVICE_OP_READ">
